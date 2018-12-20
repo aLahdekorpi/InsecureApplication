@@ -17,7 +17,7 @@ Issues #3 and #4 are presented in the same function. In SignupController.java cl
 The function has two issues. Firstly, anyone should not be able to access all the signups. There is no access control on the function, so this is possible. Secondly, it should not show all the data to anyone as there is sensitive data (user address) on the site.
 Fixing the access issue should be done with a secure login system, and session management. When those two are done, you can control who accesses this page. The access control issue is on each url on the application, since the login system does not prevent access to anything from users who have not logged in.
 Data exposure issue can be fixed by just not showing the sensitive part of the data on the site,
-deleting the line <!---<p th:text="${s.address}"></p>--> from signups.html. 
+deleting the line 12 <!---<p th:text="${s.address}"></p>--> from signups.html. 
 
 The last issue is logging. The application currently logs nothing, and this is an issue. As it reads on the OWASP list, "Most breach studies show time to detect a breach is over
 200 days, typically detected by external parties rather than internal processes or monitoring." Spring Boot offers great tool to logging, we just have to create a logging controller and a simple logback-spring.xml - file to determine what we want to log and where. The steps to a simple logger are provided here : https://www.baeldung.com/spring-boot-logging.
