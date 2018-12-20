@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class CyberSecurityBaseProjectApplication {
-
+    //starts the program
     public static void main(String[] args) throws Throwable {
         SpringApplication.run(CyberSecurityBaseProjectApplication.class);
     }
