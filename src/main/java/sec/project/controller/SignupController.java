@@ -38,7 +38,7 @@ public class SignupController {
     
     @RequestMapping("*")
     public String defaultMapping() {
-        return "redirect:/form";
+        return "redirect:/login";
     }
         
 }
